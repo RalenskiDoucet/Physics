@@ -8,6 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 0c7eba390a984424d9a00dcad93263cc, type: 3}
   m_Name: New Calculator Scriptable
   m_EditorClassIdentifier: Assembly-CSharp:Particales:CalculatorScriptable
+  pd: {fileID: 11400000, guid: c8ce1b2fefca69b47851e4641612f87d, type: 2}
