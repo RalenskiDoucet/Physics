@@ -8,6 +8,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28ce0483fb3150b4aaa64097f03ad63b, type: 3}
-  m_Name: Particle1Data
+  m_Script: {fileID: 0}
+  m_Name: New Particle Data
   m_EditorClassIdentifier: Assembly-CSharp:Particales:ParticleData
+  Displacement: {x: 0, y: 0, z: 0}
+  Force: {x: 0, y: 0, z: 0}
+  Mass: 0
+  Position: {x: 0, y: 0, z: 0}
+  Velocity: {x: 3, y: 3, z: 3}
+  Acceleration: {x: 0, y: 0, z: 0}
