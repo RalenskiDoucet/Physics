@@ -8,7 +8,7 @@ namespace Collision
     { 
         CollisionVolume mShape = new CollisionVolume();
         CollisionVolume mShape2 = new CollisionVolume();
-        BoxCollider2D box1;
+        
         
         public bool collision_made;
 
@@ -22,9 +22,13 @@ namespace Collision
                 collision_made = true;
                 BroadcastMessage("Collision was made");
             }
-            if (mShape2.y_min<mShape.y_max)
+            if (mShape2.y_min < mShape.y_max)
             {
                 collision_made = true;
+            }
+            else (mShape2.x_max > mShape.x_max)
+            {
+                collision_made = false;
             }
         }
         // Use this for initialization
