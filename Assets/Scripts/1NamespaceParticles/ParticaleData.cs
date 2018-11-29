@@ -23,5 +23,9 @@ namespace Particales
         {
             moveable_impl.Move(t);
         }
+        public void AddForce(Vector3 force)
+        {
+            Force += force;
+        }
     }
 }
