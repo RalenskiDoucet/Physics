@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Particales;
 namespace ClothPhyics
 {
 
@@ -11,11 +11,11 @@ namespace ClothPhyics
         public float dampingFactor;
         public float restLength;
         public float unitLength;
+        public Vector3 Pos;
         private Vector3 e; //unit length vector
         private Vector3 ePrime;
-        Particales.ParticleData Particle1 = new Particales.ParticleData();
-
-        Particales.ParticleData Particle2 = new Particales.ParticleData();
+        Particle Particle1;
+        Particle Particle2;
 
    
         // Use this for initialization

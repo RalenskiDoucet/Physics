@@ -8,7 +8,7 @@ namespace Particales
     {
         IMoveable moveable;
         public Transform t;
-        public ParticleData pd;
+        public Particle pd;
 
         // Use this for initialization
         void Start()

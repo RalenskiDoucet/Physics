@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace Particales
 {
-    public class LinearMove : IMoveable
+    public class LinearMove : MonoBehaviour,IMoveable
     {
-        public ParticleData pData;
+        public Particle pData;
 
-        public LinearMove(ParticleData particleData)
+        public LinearMove(Particle particleData)
         {
             pData = particleData;
         }
