@@ -6,7 +6,7 @@ namespace Particales
     public class Boids : MonoBehaviour {
 
       
-        private List<ParticleData> boids;
+        private List<Particle> boids;
         public List<GameObject> gameObjects;
 
        
@@ -50,7 +50,7 @@ namespace Particales
         }
 
 
-        public Vector3 Boid_Cohesion(ParticleData b)
+        public Vector3 Boid_Cohesion(Particle b)
         {
             // this Will keep the boids in a close group.
             var N = boids.Count;
@@ -69,7 +69,7 @@ namespace Particales
             return (pc - b.Position) / 100;
         }
 
-        public Vector3 Boid_Dispersion(ParticleData b)
+        public Vector3 Boid_Dispersion(Particle b)
         {
    
             Vector3 c = new Vector3(0, 0, 0);
@@ -86,7 +86,7 @@ namespace Particales
             return c;
         }
 
-        public Vector3 Boid_Alignment(ParticleData b)
+        public Vector3 Boid_Alignment(Particle b)
         {
          
             var N = boids.Count;
@@ -105,7 +105,7 @@ namespace Particales
             return (pv - b.Velocity) / 8;
         }
 
-        public Vector3 Bound_Position(ParticleData b)
+        public Vector3 Bound_Position(Particle b)
         {
             float Xmin = 0, Xmax = 0, Ymin = 0, Ymax = 0, Zmin = 0, Zmax = 0;
             Vector3 v = new Vector3(0, 0, 0);

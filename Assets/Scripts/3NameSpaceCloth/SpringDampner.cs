@@ -14,10 +14,10 @@ namespace ClothPhyics
         public Vector3 Pos;
         private Vector3 e; //unit length vector
         private Vector3 ePrime;
-        Particle Particle1;
-        Particle Particle2;
+        Particales.Particle Particle1;
+        Particales.Particle Particle2;
 
-   
+
         // Use this for initialization
         void Start()
         {

@@ -15,6 +15,7 @@ namespace Particales
             public Vector3 Displacement { get; set; }
             public Vector3 Force { get; set; }
             public float Mass { get; set; }
+            public float dt;
             public bool isAnchor;
 
             public Particle(Vector3 pos)
@@ -29,7 +30,7 @@ namespace Particales
                 Force += force;
             }
 
-            public void Update(float dt)
+            public void Update()
             {
                 if (isAnchor)
                 {

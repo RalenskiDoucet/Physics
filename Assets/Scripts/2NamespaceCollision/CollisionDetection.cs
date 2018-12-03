@@ -26,7 +26,7 @@ namespace Collision
             {
                 collision_made = true;
             }
-            else (mShape2.x_max > mShape.x_max)
+            else if(mShape2.x_max > mShape.x_max)
             {
                 collision_made = false;
             }
