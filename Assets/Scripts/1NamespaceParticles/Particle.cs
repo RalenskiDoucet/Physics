@@ -7,15 +7,14 @@ namespace Particales
     [CreateAssetMenu(menuName = "Particle")]
 
         [System.Serializable]
-        public class Particle:MonoBehaviour
+        public class Particle
         {
             public Vector3 Velocity { get; set; }
             public Vector3 Position { get; set; }
             public Vector3 Acceleration { get; set; }
             public Vector3 Displacement { get; set; }
             public Vector3 Force { get; set; }
-            public float Mass { get; set; }
-            public float dt;
+            public float Mass { get; set; }            
             public bool isAnchor;
 
             public Particle(Vector3 pos)
@@ -30,7 +29,7 @@ namespace Particales
                 Force += force;
             }
 
-            public void Update()
+            public void Update(float dt)
             {
                 if (isAnchor)
                 {
