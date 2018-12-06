@@ -7,7 +7,7 @@ namespace Particales
     [CreateAssetMenu(menuName = "Particle")]
 
         [System.Serializable]
-        public class Particle:MonoBehaviour
+        public class Particle
         {
             public Vector3 Velocity { get; set; }
             public Vector3 Position { get; set; }
@@ -16,8 +16,10 @@ namespace Particales
             public Vector3 Force { get; set; }
             public float Mass { get; set; }
             public bool isAnchor;
+            public bool isActive = true;
+            public string name = "null";
 
-            public Particle(Vector3 pos)
+        public Particle(Vector3 pos)
             {
                 Position = pos;
                 Velocity = new Vector3(0, -1, 0);
