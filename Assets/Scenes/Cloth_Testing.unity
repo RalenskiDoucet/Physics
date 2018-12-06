@@ -145,6 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particle1:
     isAnchor: 0
+    isActive: 0
+    name: 
 --- !u!23 &15951763
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -267,6 +269,7 @@ Transform:
   - {fileID: 1016665544}
   - {fileID: 940543981}
   - {fileID: 1806088333}
+  - {fileID: 1436826969}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -314,7 +317,6 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 15951761}
   p2: {fileID: 1114309623}
 --- !u!1 &118119043
@@ -361,7 +363,6 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 1281395066}
   p2: {fileID: 15951761}
 --- !u!1 &295402302
@@ -409,6 +410,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particle1:
     isAnchor: 0
+    isActive: 0
+    name: 
 --- !u!23 &295402305
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -507,7 +510,6 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 1509429794}
   p2: {fileID: 1114309623}
 --- !u!1 &428018863
@@ -554,7 +556,6 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 1509429794}
   p2: {fileID: 15951761}
 --- !u!1 &436694260
@@ -602,6 +603,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particle1:
     isAnchor: 0
+    isActive: 0
+    name: 
 --- !u!23 &436694263
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -700,7 +703,6 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 1114309623}
   p2: {fileID: 295402302}
 --- !u!1 &522650239
@@ -747,7 +749,6 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 1509429794}
   p2: {fileID: 1281395066}
 --- !u!1 &522997539
@@ -794,7 +795,6 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 15951761}
   p2: {fileID: 436694260}
 --- !u!1 &613545957
@@ -907,7 +907,6 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 1114309623}
   p2: {fileID: 1512028844}
 --- !u!1 &758175493
@@ -1027,6 +1026,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particle1:
     isAnchor: 0
+    isActive: 0
+    name: 
 --- !u!23 &891650512
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1138,7 +1139,6 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 891650510}
   p2: {fileID: 1512028844}
 --- !u!1 &940543980
@@ -1185,7 +1185,6 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 295402302}
   p2: {fileID: 436694260}
 --- !u!1 &1014307736
@@ -1232,7 +1231,6 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 1956028723}
   p2: {fileID: 1114309623}
 --- !u!1 &1016665543
@@ -1279,7 +1277,6 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 1114309623}
   p2: {fileID: 891650510}
 --- !u!1 &1096621666
@@ -1326,7 +1323,6 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 1281395066}
   p2: {fileID: 891650510}
 --- !u!1 &1114309623
@@ -1361,6 +1357,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particle1:
     isAnchor: 0
+    isActive: 0
+    name: 
 --- !u!23 &1114309625
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1473,6 +1471,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particle1:
     isAnchor: 0
+    isActive: 1
+    name: 
 --- !u!23 &1281395069
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1571,9 +1571,54 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 1281395066}
   p2: {fileID: 1114309623}
+--- !u!1 &1436826968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1436826969}
+  - component: {fileID: 1436826970}
+  m_Layer: 0
+  m_Name: spring 9&6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1436826969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436826968}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 25194033}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1436826970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436826968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d1f8e83ddaa26409b765e293aafaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  springConstant: 0
+  dampingFactor: 0
+  restLength: 0
+  unitLength: 0
+  p1: {fileID: 1512028844}
+  p2: {fileID: 891650510}
 --- !u!1 &1450179952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,10 +1660,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   springConstant: 20
-  dampingFactor: 100
+  dampingFactor: 150
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 1114309623}
   p2: {fileID: 436694260}
 --- !u!1 &1509429794
@@ -1652,7 +1696,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle1:
-    isAnchor: 0
+    isAnchor: 1
+    isActive: 1
+    name: 
 --- !u!23 &1509429796
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1765,6 +1811,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particle1:
     isAnchor: 0
+    isActive: 0
+    name: 
 --- !u!23 &1512028847
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1863,7 +1911,6 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 1281395066}
   p2: {fileID: 1956028723}
 --- !u!1 &1567739469
@@ -1910,7 +1957,6 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 1956028723}
   p2: {fileID: 891650510}
 --- !u!1 &1693249427
@@ -1957,7 +2003,6 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 891650510}
   p2: {fileID: 436694260}
 --- !u!1 &1806088332
@@ -2004,8 +2049,7 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
-  p1: {fileID: 295402302}
+  p1: {fileID: 436694260}
   p2: {fileID: 1512028844}
 --- !u!1 &1952201163
 GameObject:
@@ -2051,7 +2095,6 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  Pos: {x: 0, y: 0, z: 0}
   p1: {fileID: 15951761}
   p2: {fileID: 295402302}
 --- !u!1 &1956028723
@@ -2098,7 +2141,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle1:
-    isAnchor: 0
+    isAnchor: 1
+    isActive: 1
+    name: 
 --- !u!23 &1956028726
 MeshRenderer:
   m_ObjectHideFlags: 0

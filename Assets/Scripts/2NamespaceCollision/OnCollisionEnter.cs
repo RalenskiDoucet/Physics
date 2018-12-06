@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Collision
 {
-    public class OnCollisionEnter
+    public class OnCollisionEnter:MonoBehaviour
     {
 
     }

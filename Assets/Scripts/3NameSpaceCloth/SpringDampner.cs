@@ -11,7 +11,7 @@ namespace ClothPhyics
         public float dampingFactor;
         public float restLength;
         public float unitLength;
-        public Vector3 Pos;
+     
         private Vector3 e; //unit length vector
         private Vector3 ePrime;
         Particales.Particle Particle1;
@@ -21,21 +21,28 @@ namespace ClothPhyics
         private List<SpringDampner> springs = new List<SpringDampner>();
         Gizmos gizmos = new Gizmos();
         public GameObject p1, p2;
-
-        void draw()
+        AeroDynamicForce ADF;
+        void OnDrawGizmos()
         {
             foreach (var p in Particles)
             {
+                p1.transform.position = Particle1.Position;
+                p2.transform.position = Particle2.Position;
                 Gizmos.color = Color.red;
-                Gizmos.DrawSphere(p.Position, .25f);
+                Gizmos.DrawSphere(p1.transform.position, 2);
 
             }
             foreach (var s in springs)
             {
+                
                 Gizmos.color = Color.magenta;
                 Gizmos.DrawLine(Particle1.Position, Particle2.Position);
             }
 
+        }
+        public bool CheckParticles(Particle temp)
+        {
+            return temp.name ==  ADF.AreoPart1.name || temp.name == ADF.AreoPart2.name || temp.name == ADF.AreoPart3.name;
         }
         // Use this for initialization
         void Start()
@@ -47,8 +54,7 @@ namespace ClothPhyics
             Particle2 = p2.GetComponent<ClothBehaviour>().particle1;
             restLength = Vector3.Distance(Particle1.Position, Particle2.Position);
             springConstant = 20;
-            dampingFactor = 100;
-            draw();
+            dampingFactor = 100;            
         }
 
         // Update is called once per frame

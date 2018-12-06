@@ -18,13 +18,12 @@ namespace ClothPhyics
             particle1 = new Particales.Particle(new Vector3(particle1.Position.x, particle1.Position.y, particle1.Position.z));
             particle1.Position = transform.position;            
             particle1.Mass = 1;
-
-           
         }
             
         void Awake()
         {
             clothStart();
+
         }
 
         // Update is called once per frame

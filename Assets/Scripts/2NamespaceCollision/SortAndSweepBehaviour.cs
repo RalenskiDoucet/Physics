@@ -7,32 +7,32 @@ namespace Collision
 {
     public class SortAndSweepBehaviour : MonoBehaviour
     {
-        public List<CollisionVolume> xValues;
-        private List<CollisionVolume> yValues;
-        public List<CollisionVolume> activeList;
-        public List<CollisionVolume> closedList;
+        public List<CollisionVolume> x_Values;
+        private List<CollisionVolume> y_Values;
+        public List<CollisionVolume> active_List;
+        public List<CollisionVolume> closed_List;
 
         // Use this for initialization
         void Start()
         {
-            xValues = new List<CollisionVolume>(GetComponents<CollisionVolume>());
-            yValues = new List<CollisionVolume>(GetComponents<CollisionVolume>());
+            x_Values = new List<CollisionVolume>(GetComponents<CollisionVolume>());
+            y_Values = new List<CollisionVolume>(GetComponents<CollisionVolume>());
         }
 
-        public void CheckCollisionForXAxis()
+        public void CollisionForXAxis()
         {
-            xValues.OrderBy(v => v.x_min);
-            for(int i = 0; i < xValues.Count; i++)
+            x_Values.OrderBy(v => v.x_min);
+            for(int i = 0; i < x_Values.Count; i++)
             {
-                foreach(var volume in xValues)
+                foreach(var volume in x_Values)
                 {
-                    activeList.Add(volume);
-                    if(activeList.Count >= 2)
+                    active_List.Add(volume);
+                    if(active_List.Count >= 2)
                     {
-                        if(activeList[0].x_min < activeList[1].x_max)
+                        if(active_List[0].x_min < active_List[1].x_max)
                         {
-                            closedList.Add(activeList[0]);
-                            activeList.Remove(activeList[0]);
+                            closed_List.Add(active_List[0]);
+                            active_List.Remove(active_List[0]);
                             Debug.Log("collision on X axis");
                         }
                     }
@@ -40,20 +40,20 @@ namespace Collision
             }
         }
 
-        public void CheckCollisionForYAxis()
+        public void CollisionForYAxis()
         {
-            yValues.OrderBy(v => v.y_min);
-            for (int i = 0; i < yValues.Count; i++)
+            y_Values.OrderBy(v => v.y_min);
+            for (int i = 0; i < y_Values.Count; i++)
             {
-                foreach (var volume in yValues)
+                foreach (var volume in y_Values)
                 {
-                    activeList.Add(volume);
-                    if (activeList.Count >= 2)
+                    active_List.Add(volume);
+                    if (active_List.Count >= 2)
                     {
-                        if (activeList[0].y_min < activeList[1].y_max)
+                        if (active_List[0].y_min < active_List[1].y_max)
                         {
-                            closedList.Add(activeList[0]);
-                            activeList.Remove(activeList[0]);
+                            closed_List.Add(active_List[0]);
+                            active_List.Remove(active_List[0]);
                             Debug.Log("collision on Y axis");
                         }
                     }

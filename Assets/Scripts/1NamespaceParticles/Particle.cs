@@ -14,10 +14,12 @@ namespace Particales
             public Vector3 Acceleration { get; set; }
             public Vector3 Displacement { get; set; }
             public Vector3 Force { get; set; }
-            public float Mass { get; set; }            
+            public float Mass { get; set; }
             public bool isAnchor;
+            public bool isActive = true;
+            public string name = "null";
 
-            public Particle(Vector3 pos)
+        public Particle(Vector3 pos)
             {
                 Position = pos;
                 Velocity = new Vector3(0, -1, 0);

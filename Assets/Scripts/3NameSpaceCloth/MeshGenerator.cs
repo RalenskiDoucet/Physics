@@ -15,7 +15,7 @@ namespace ClothPhyics {
 
         // Use this for initialization
         void Start() {
-            InstanceMeshFilter.name = "Example";
+            InstanceMeshFilter.name = gameObject.name.ToString() ;
             for (int x = 0; x < 5; x++)
             {
                 for (int y = 0; y < 5; y++)
