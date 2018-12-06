@@ -21,7 +21,7 @@ namespace ClothPhyics
         private List<SpringDampner> springs = new List<SpringDampner>();
         Gizmos gizmos = new Gizmos();
         public GameObject p1, p2;
-        AeroDynamicForce ADF;
+
         void OnDrawGizmos()
         {
             foreach (var p in Particles)
@@ -40,10 +40,7 @@ namespace ClothPhyics
             }
 
         }
-        public bool CheckParticles(Particle temp)
-        {
-            return temp.name ==  ADF.AreoPart1.name || temp.name == ADF.AreoPart2.name || temp.name == ADF.AreoPart3.name;
-        }
+
         // Use this for initialization
         void Start()
         {
