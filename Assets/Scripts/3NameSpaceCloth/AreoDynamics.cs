@@ -4,7 +4,7 @@ using Particales;
 using UnityEngine;
 namespace ClothPhyics
 {
-    public class AeroDynamicForce
+    public class AeroDynamicForce : MonoBehaviour
     {
         public Vector3 density; //density of air
         private float Cd; //coefficient of drag for the object
