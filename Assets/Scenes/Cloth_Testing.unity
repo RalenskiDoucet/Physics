@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 15951765}
   - component: {fileID: 15951763}
   - component: {fileID: 15951762}
-  - component: {fileID: 15951767}
   - component: {fileID: 15951769}
   - component: {fileID: 15951768}
   m_Layer: 0
@@ -204,19 +203,6 @@ Transform:
   m_Father: {fileID: 25194033}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &15951767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 15951761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de430fb962f79224cbb01be9445b24ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InstanceMeshFilter: {fileID: 15951765}
-  InstanceMesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &15951768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,8 +333,8 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  p1: {fileID: 15951761}
-  p2: {fileID: 1114309623}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!1 &118119043
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,8 +379,8 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  p1: {fileID: 1281395066}
-  p2: {fileID: 15951761}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!1 &295402302
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +392,6 @@ GameObject:
   - component: {fileID: 295402307}
   - component: {fileID: 295402305}
   - component: {fileID: 295402304}
-  - component: {fileID: 295402308}
   - component: {fileID: 295402310}
   - component: {fileID: 295402309}
   m_Layer: 0
@@ -486,19 +471,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 295402302}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &295402308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 295402302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de430fb962f79224cbb01be9445b24ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InstanceMeshFilter: {fileID: 295402307}
-  InstanceMesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &295402309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,7 +543,7 @@ MonoBehaviour:
   restLength: 13.08
   unitLength: 13.104933
   p1: {fileID: 1509429794}
-  p2: {fileID: 1114309623}
+  p2: {fileID: 0}
 --- !u!1 &428018863
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +589,7 @@ MonoBehaviour:
   restLength: 13.08
   unitLength: 13.104933
   p1: {fileID: 1509429794}
-  p2: {fileID: 15951761}
+  p2: {fileID: 0}
 --- !u!1 &436694260
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +601,6 @@ GameObject:
   - component: {fileID: 436694265}
   - component: {fileID: 436694263}
   - component: {fileID: 436694262}
-  - component: {fileID: 436694266}
   - component: {fileID: 436694268}
   - component: {fileID: 436694267}
   m_Layer: 0
@@ -709,19 +680,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 436694260}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &436694266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 436694260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de430fb962f79224cbb01be9445b24ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InstanceMeshFilter: {fileID: 436694265}
-  InstanceMesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &436694267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -793,8 +751,8 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  p1: {fileID: 1114309623}
-  p2: {fileID: 295402302}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!1 &522650239
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,7 +798,7 @@ MonoBehaviour:
   restLength: 13.08
   unitLength: 13.104933
   p1: {fileID: 1509429794}
-  p2: {fileID: 1281395066}
+  p2: {fileID: 0}
 --- !u!1 &522997539
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,8 +843,8 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  p1: {fileID: 15951761}
-  p2: {fileID: 436694260}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!1 &613545957
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,8 +955,8 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  p1: {fileID: 1114309623}
-  p2: {fileID: 1512028844}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!1 &758175493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,7 +1053,6 @@ GameObject:
   - component: {fileID: 891650514}
   - component: {fileID: 891650512}
   - component: {fileID: 891650511}
-  - component: {fileID: 891650516}
   - component: {fileID: 891650518}
   - component: {fileID: 891650517}
   m_Layer: 0
@@ -1175,19 +1132,6 @@ Transform:
   m_Father: {fileID: 25194033}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &891650516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 891650510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de430fb962f79224cbb01be9445b24ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InstanceMeshFilter: {fileID: 891650514}
-  InstanceMesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &891650517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1259,8 +1203,8 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  p1: {fileID: 891650510}
-  p2: {fileID: 1512028844}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!1 &940543980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1305,8 +1249,8 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  p1: {fileID: 295402302}
-  p2: {fileID: 436694260}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!1 &1014307736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,8 +1295,8 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  p1: {fileID: 1956028723}
-  p2: {fileID: 1114309623}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!1 &1016665543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,8 +1341,8 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  p1: {fileID: 1114309623}
-  p2: {fileID: 891650510}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!1 &1096621666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,8 +1387,8 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  p1: {fileID: 1281395066}
-  p2: {fileID: 891650510}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!1 &1114309623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,7 +1400,6 @@ GameObject:
   - component: {fileID: 1114309627}
   - component: {fileID: 1114309625}
   - component: {fileID: 1114309624}
-  - component: {fileID: 1114309629}
   - component: {fileID: 1114309630}
   m_Layer: 0
   m_Name: p5
@@ -1535,19 +1478,6 @@ Transform:
   m_Father: {fileID: 25194033}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1114309629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1114309623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de430fb962f79224cbb01be9445b24ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InstanceMeshFilter: {fileID: 1114309627}
-  InstanceMesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1114309630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1573,7 +1503,6 @@ GameObject:
   - component: {fileID: 1281395071}
   - component: {fileID: 1281395069}
   - component: {fileID: 1281395068}
-  - component: {fileID: 1281395072}
   - component: {fileID: 1281395073}
   m_Layer: 0
   m_Name: p2
@@ -1652,19 +1581,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1281395066}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1281395072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1281395066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de430fb962f79224cbb01be9445b24ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InstanceMeshFilter: {fileID: 1281395071}
-  InstanceMesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1281395073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1723,8 +1639,8 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  p1: {fileID: 1281395066}
-  p2: {fileID: 1114309623}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!1 &1436826968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,8 +1685,8 @@ MonoBehaviour:
   dampingFactor: 0
   restLength: 0
   unitLength: 0
-  p1: {fileID: 1512028844}
-  p2: {fileID: 891650510}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!1 &1450179952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,8 +1731,8 @@ MonoBehaviour:
   dampingFactor: 150
   restLength: 13.08
   unitLength: 13.104933
-  p1: {fileID: 1114309623}
-  p2: {fileID: 436694260}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!1 &1509429794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1828,10 +1744,10 @@ GameObject:
   - component: {fileID: 1509429798}
   - component: {fileID: 1509429796}
   - component: {fileID: 1509429795}
-  - component: {fileID: 1509429800}
   - component: {fileID: 1509429803}
   - component: {fileID: 1509429802}
   - component: {fileID: 1509429801}
+  - component: {fileID: 1509429797}
   m_Layer: 0
   m_Name: p1
   m_TagString: Untagged
@@ -1889,6 +1805,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1509429797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1509429794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de430fb962f79224cbb01be9445b24ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InstanceMeshFilter: {fileID: 1509429798}
+  InstanceMesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1509429798
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1909,19 +1838,6 @@ Transform:
   m_Father: {fileID: 25194033}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1509429800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1509429794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de430fb962f79224cbb01be9445b24ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InstanceMeshFilter: {fileID: 1509429798}
-  InstanceMesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1509429801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1973,7 +1889,6 @@ GameObject:
   - component: {fileID: 1512028849}
   - component: {fileID: 1512028847}
   - component: {fileID: 1512028846}
-  - component: {fileID: 1512028850}
   - component: {fileID: 1512028852}
   - component: {fileID: 1512028851}
   m_Layer: 0
@@ -2053,19 +1968,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1512028844}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1512028850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1512028844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de430fb962f79224cbb01be9445b24ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InstanceMeshFilter: {fileID: 1512028849}
-  InstanceMesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1512028851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2137,8 +2039,8 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  p1: {fileID: 1281395066}
-  p2: {fileID: 1956028723}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!1 &1567739469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2183,8 +2085,8 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  p1: {fileID: 1956028723}
-  p2: {fileID: 891650510}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!1 &1693249427
 GameObject:
   m_ObjectHideFlags: 0
@@ -2229,8 +2131,8 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  p1: {fileID: 891650510}
-  p2: {fileID: 436694260}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!1 &1806088332
 GameObject:
   m_ObjectHideFlags: 0
@@ -2275,8 +2177,8 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  p1: {fileID: 436694260}
-  p2: {fileID: 1512028844}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!1 &1952201163
 GameObject:
   m_ObjectHideFlags: 0
@@ -2321,8 +2223,8 @@ MonoBehaviour:
   dampingFactor: 100
   restLength: 13.08
   unitLength: 13.104933
-  p1: {fileID: 15951761}
-  p2: {fileID: 295402302}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!1 &1956028723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2334,7 +2236,6 @@ GameObject:
   - component: {fileID: 1956028728}
   - component: {fileID: 1956028726}
   - component: {fileID: 1956028725}
-  - component: {fileID: 1956028729}
   - component: {fileID: 1956028731}
   - component: {fileID: 1956028730}
   m_Layer: 0
@@ -2414,19 +2315,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1956028723}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1956028729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1956028723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de430fb962f79224cbb01be9445b24ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InstanceMeshFilter: {fileID: 1956028728}
-  InstanceMesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1956028730
 MonoBehaviour:
   m_ObjectHideFlags: 0
