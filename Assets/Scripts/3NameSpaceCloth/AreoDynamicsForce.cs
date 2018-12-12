@@ -4,8 +4,8 @@ using Particales;
 using UnityEngine;
 namespace ClothPhyics
 {
-    public class AeroDynamicForce : MonoBehaviour
-    {
+    public class AeroDynamicForce:MonoBehaviour
+    { 
         public Vector3 density; //density of air
         private float Cd; //coefficient of drag for the object
         private Vector3 a; //cross sectional area of the object
@@ -16,16 +16,19 @@ namespace ClothPhyics
 
         public AeroDynamicForce(Particle p1, Particle p2, Particle p3)
         {
-            AreoPart1 = p1;
-            AreoPart2 = p2;
-            AreoPart3 = p3;
+            p1 = AreoPart1;
+            p2 = AreoPart2;
+            p3 = AreoPart3;
             density = new Vector3(0, 0, 1);
         }
         public bool CheckParticles(Particle temp)
         {
             return temp.name == AreoPart1.name || temp.name == AreoPart2.name || temp.name == AreoPart3.name;
         }
+        void Start()
+        {
 
+        }
 
         public void Update()
         {
