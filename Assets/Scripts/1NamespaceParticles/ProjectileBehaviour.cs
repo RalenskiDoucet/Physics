@@ -10,7 +10,7 @@ namespace Particales
     public class ProjectileBehaviour : MonoBehaviour
     {
         [SerializeField]
-        public ProjectileData pd;
+        public ParticleData pd;
 
         // Use this for initialization
         void Start()
@@ -47,7 +47,7 @@ namespace Particales
     public class ProjectileMovementEditor : Editor
     {
         private ProjectileBehaviour pb;
-        public ProjectileData pd;
+        public ParticleData pd;
 
         private Vector3 initial_velocity;
         private float angle;

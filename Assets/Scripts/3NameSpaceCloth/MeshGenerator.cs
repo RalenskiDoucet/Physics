@@ -1,21 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Particales;
 
 namespace ClothPhyics { 
     public class MeshGenerator : MonoBehaviour {
 
-        List<Vector3> Vertices = new List<Vector3>();
-        List<int> TrianglePoints = new List<int>();
-        List<Vector3> SurfaceNormals = new List<Vector3>();
-        List<Vector2> UVs = new List<Vector2>();
+        public List<Vector3> Vertices = new List<Vector3>();
+        public List<Particle> Particles = new List<Particle>();
+        public List<SpringDampner> Springs = new List<SpringDampner>();
+        public List<int> TrianglePoints = new List<int>();
+        public  List<Vector3> SurfaceNormals = new List<Vector3>();
+        public List<Vector2> UVs = new List<Vector2>();
         public MeshFilter InstanceMeshFilter;
         public Mesh InstanceMesh = new Mesh();
 
 
-        // Use this for initialization
-        void Start() {
-            InstanceMeshFilter.name = gameObject.name.ToString() ;
+        void Awake()
+        {
+            InstanceMeshFilter.name = gameObject.name.ToString();
             for (int x = 0; x < 5; x++)
             {
                 for (int y = 0; y < 5; y++)
@@ -52,6 +55,10 @@ namespace ClothPhyics {
             }
             InstanceMesh.uv = UVs.ToArray();
             InstanceMeshFilter.mesh = InstanceMesh;
+        }
+        // Use this for initialization
+        void Start() {
+            
         }
 
         // Update is called once per frame
