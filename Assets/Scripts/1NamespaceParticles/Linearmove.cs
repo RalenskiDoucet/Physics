@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace Particales
 {
-    public class LinearMove : MonoBehaviour,IMoveable
+    public class LinearMove : IMoveable
     {
-        public Particle pData;
+        public ParticleData pData;
 
-        public LinearMove(Particle particleData)
+        public LinearMove(ParticleData particleData)
         {
             pData = particleData;
         }
 
         public void Move(Transform t)
         {
-            pData.Acceleration = pData.Force * pData.Mass;
-            pData.Velocity = pData.Velocity + pData.Acceleration * Time.deltaTime;
-            t.position = pData.Velocity * Time.deltaTime;
+            pData.acceleration = pData.Force * pData.Mass;
+            pData.velocity = pData.velocity + pData.acceleration * Time.deltaTime;
+            t.position = pData.velocity * Time.deltaTime;
         }
     }
 }
