@@ -8,7 +8,7 @@ namespace Collision
     public class OnCollision:MonoBehaviour
     {
         Particle b;
-        BoidsBehaviour boids;
+        BoidRulesBehaviour boids;
         void OnCollisionEnter()
         {
             boids.Boid_Dispersion(b);

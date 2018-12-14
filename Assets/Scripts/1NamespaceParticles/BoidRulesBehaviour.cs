@@ -5,16 +5,16 @@ using UnityEngine;
 using UnityEngine.UI;
 namespace Particales
 {
-    public class BoidsBehaviour : MonoBehaviour {
+    public class BoidRulesBehaviour : MonoBehaviour
+    {
 
-
-        private List<ParticleData> boids;
+        public List<ParticleData> boids;
         public List<GameObject> gameObjects;
         public float flock = 2.0f;
         public Toggle b1toggle;
         public Toggle b2toggle;
         public Toggle b3toggle;
-
+        public Particle bdPart;
         private void Start()
         {
             foreach (var p in boids)
@@ -37,7 +37,7 @@ namespace Particales
             Vector3 vec2;
             Vector3 vec3;
             Vector3 vec4;
-
+            
             foreach (var b in boids)
             {
                 if (b.isPerching)
@@ -60,18 +60,18 @@ namespace Particales
                     if (b1toggle.isOn)
                     {
                         //calls Rule 1
-                        vec1 = flock * Boid_Cohesion(b2toggle);
+                        vec1 = flock * Boid_Cohesion(bdPart);
                     }
                     else
-                        vec1 = -flock * Boid_Cohesion(b2toggle.isOn);
+                        vec1 = -flock * Boid_Cohesion(bdPart);
 
                     if (b2toggle.isOn)
                     {
                         //calls Rule 2
-                        vec2 = Boid_Dispersion(b);
+                        vec2 = Boid_Dispersion(bdPart);
                     }
                     else
-                        vec2 = -Boid_Dispersion(b1toggle);
+                        vec2 = Boid_Dispersion(bdPart);
 
 
                     b.velocity += vec1 + vec2 * Time.deltaTime;
@@ -80,13 +80,13 @@ namespace Particales
                     if (b3toggle.isOn)
                     {
                         //calls Rule 3
-                        vec3 = Boid_Alignment(b);
+                        vec3 = Boid_Alignment(bdPart);
                         b.velocity += vec1 + vec2 + vec3 * Time.deltaTime;
                     }
                     else
                         b.velocity += vec1 + vec2 * Time.deltaTime;
 
-                    vec4 = Bound_Position(b);
+                    vec4 = Bound_Position(bdPart);
 
                     if (b.velocity.magnitude > 10)
                         b.velocity = b.velocity.normalized;
@@ -101,27 +101,27 @@ namespace Particales
 
         public Vector3 Boid_Cohesion(Particle b)
         {
-            
+           
             var N = boids.Count;
 
 
-            Vector3 pc = new Vector3(0, 0, 0);
+            Vector3 temp = new Vector3(0, 0, 0);
 
             foreach (var item in boids)
             {
                 if (item != b1toggle)
                 {
-                    pc += item.current_position;
+                    temp += item.current_position;
                 }
             }
-            pc = pc / (N - 1);
-            return (pc - b.Position) / 100;
+            temp = temp / (N - 1);
+            return (temp - b.Position) / 100;
         }
 
         public Vector3 Boid_Dispersion(Particle b)
         {
 
-            Vector3 c = new Vector3(0, 0, 0);
+            Vector3 temp = new Vector3(0, 0, 0);
 
 
             foreach (var item in boids)
@@ -129,10 +129,10 @@ namespace Particales
                 if (item != b1toggle)
                     if ((item.current_position - b.Position).magnitude <= 1)
                     {
-                        c = c - (item.current_position - b.Position);
+                        temp = temp - (item.current_position - b.Position);
                     }
             }
-            return c;
+            return temp;
         }
 
         public Vector3 Boid_Alignment(Particle b)
@@ -140,80 +140,79 @@ namespace Particales
 
             var N = boids.Count;
 
-            Vector3 pv = new Vector3(0, 0, 0);
+            Vector3 temp = new Vector3(0, 0, 0);
 
 
             foreach (var item in boids)
             {
                 if (item != b1toggle)
                 {
-                    pv += b.Velocity;
+                    temp += b.Velocity;
                 }
             }
-            pv = pv / (N - 1);
-            return (pv - b.Velocity) / 8;
+            temp = temp / (N - 1);
+            return (temp - b.Velocity) / 8;
         }
 
         public Vector3 Bound_Position(Particle b)
         {
             float Xmin = 0, Xmax = 0, Ymin = 0, Ymax = 0, Zmin = 0, Zmax = 0;
-            Vector3 v = new Vector3(0, 0, 0);
+            Vector3 temp = new Vector3(0, 0, 0);
 
             if (b.Position.x < Xmin)
             {
-                v.x = Screen.width;
+                temp.x = Screen.width;
             }
             else if (b.Position.x > Xmax)
             {
-                v.x = -15;
+                temp.x = -15;
             }
 
             if (b.Position.y < Ymin)
             {
-                v.y = Screen.height;
+                temp.y = Screen.height;
             }
             else if (b.Position.x > Ymax)
             {
-                v.y = -15;
+                temp.y = -15;
             }
 
             if (b.Position.y < Zmin)
             {
-                v.z = 15;
+                temp.z = 15;
             }
             else if (b.Position.x > Zmax)
             {
-                v.z = -15;
+                temp.z = -15;
             }
 
-            return v;
+            return temp;
+        }
+    }
+#if UNITY_EDITOR
+    [CustomEditor(typeof(BoidRulesBehaviour))]
+    public class BoidBehaviourSettings : Editor
+    {
+        private BoidRulesBehaviour tempBoid;
+
+        private void OnEnable()
+        {
+            tempBoid = target as BoidRulesBehaviour ;
         }
 
-#if UNITY_EDITOR
-    [CustomEditor(typeof(BoidsBehaviour))]
-        public class BoidBehaviourEditor : Editor
+        public override void OnInspectorGUI()
         {
-            private BoidsBehaviour bBoids;
+            base.OnInspectorGUI();
+            tempBoid.flock = GUILayout.VerticalSlider(tempBoid.flock, 1, -1);
 
-            private void OnEnable()
+            if (GUILayout.Button("Land Boids"))
             {
-                b = target as boids;
-            }
-
-            public override void OnInspectorGUI()
-            {
-                base.OnInspectorGUI();
-                b.flock = GUILayout.HorizontalSlider(b.flock, 1, -1);
-
-                if (GUILayout.Button("Land Boids"))
+                foreach (var item in tempBoid.boids)
                 {
-                    foreach (var item in bBoids.boids)
-                    {
-                        item.current_position.y = 0;
-                    }
+                    item.current_position.y = 0;
                 }
             }
         }
-#endif
     }
+#endif
 }

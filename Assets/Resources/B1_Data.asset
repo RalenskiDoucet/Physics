@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c9112f30ef0e964e825241b80214b86, type: 3}
+  m_Name: B1_Data
+  m_EditorClassIdentifier: 
+  starting_velocity: {x: 0, y: 0, z: 0}
+  current_velocity: {x: 0, y: 0, z: 4}
+  Force: {x: 3, y: 2, z: 1}
+  Mass: 3
+  initial_position: {x: 25.3, y: 14.3, z: -48.5}
+  current_position: {x: 25.3, y: 14.3, z: 0}
+  isPerching: 0
+  perch_timer: 50
+  velocity: {x: 0, y: 0, z: 0}
+  acceleration: {x: 0, y: 0, z: 0}
+  starting_height: {x: 0, y: 0, z: 0}
+  current_height: {x: 0, y: 0, z: 0}
+  gravity: {x: 0, y: -9.81, z: 0}
+  angle: 0
+  time: 0.1
+  speed: 0.20387359

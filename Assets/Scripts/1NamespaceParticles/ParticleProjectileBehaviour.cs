@@ -7,7 +7,7 @@ using UnityEditor;
 
 namespace Particales
 {
-    public class ProjectileBehaviour : MonoBehaviour
+    public class ParticleProjectileBehaviour : MonoBehaviour
     {
         [SerializeField]
         public ParticleData pd;
@@ -15,7 +15,7 @@ namespace Particales
         // Use this for initialization
         void Start()
         {
-            ScriptableObject.CreateInstance("ProjectileData");
+            ScriptableObject.CreateInstance("ParticleProjectileData");
         }
 
         public Vector3 ProjectileMove(Vector3 velocity, float angle, Vector3 initial_height)
@@ -43,10 +43,10 @@ namespace Particales
 
 #if UNITY_EDITOR
 
-    [CustomEditor(typeof(ProjectileBehaviour))]
+    [CustomEditor(typeof(ParticleProjectileBehaviour))]
     public class ProjectileMovementEditor : Editor
     {
-        private ProjectileBehaviour pb;
+        private ParticleProjectileBehaviour pb;
         public ParticleData pd;
 
         private Vector3 initial_velocity;
@@ -57,7 +57,7 @@ namespace Particales
         private void OnEnable()
         {
             CreateInstance("ProjectileData");
-            pb = target as ProjectileBehaviour;
+            pb = target as ParticleProjectileBehaviour;
             initial_velocity = pd.starting_velocity;
             angle = pd.angle;
             initial_height = pd.starting_height;
