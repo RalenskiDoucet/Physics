@@ -1086,15 +1086,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boids: []
-  gameObjects: []
-  flock: 1
+  gameObjects:
+  - {fileID: 780870771}
+  - {fileID: 1303505260}
+  - {fileID: 495308113}
+  flock: 0.7804154
   b1toggle: {fileID: 1377543262}
   b2toggle: {fileID: 629060432}
   b3toggle: {fileID: 1695881272}
   bdPart:
     isAnchor: 0
-    isActive: 0
-    name: 
+    isActive: 1
+    name: boids
 --- !u!4 &1260558173
 Transform:
   m_ObjectHideFlags: 0
@@ -1108,6 +1111,7 @@ Transform:
   - {fileID: 780870772}
   - {fileID: 1303505261}
   - {fileID: 495308114}
+  - {fileID: 1714466087}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1386,7 +1390,7 @@ RectTransform:
   - {fileID: 1695881271}
   - {fileID: 1377543261}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1611,7 +1615,7 @@ MonoBehaviour:
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_ForceModuleActive: 1
 --- !u!114 &1714466086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1623,7 +1627,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1260558171}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1714466087
@@ -1632,12 +1636,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1714466084}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.3, y: -0.5, z: 5.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1260558173}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1760019148
 GameObject:
